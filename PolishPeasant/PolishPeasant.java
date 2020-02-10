@@ -2,8 +2,8 @@ public class PolishPeasant{
 
 
 	public static void main(String[] args){
-		int num1 = 999;
-		int num2 = 15;
+		int num1 = 50;
+		int num2 = 30;
 		int product = 0;
 
 		//Just to label num1 and num2
@@ -18,6 +18,10 @@ public class PolishPeasant{
 		//A loop to continue to read num2 and divide by half until num2 is 1
 		//The if statement continues to add all of num1 when num2 is odd
 		while(num2 != 1){
+			if(num1 == 0 || num2 == 0){
+				product = 0;
+				break;
+			}
 			num2 = num2 / 2;
 			num1 = num1 * 2;
 			if(num2 % 2 == 1){
