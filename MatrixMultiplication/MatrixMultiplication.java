@@ -49,7 +49,8 @@ public class MatrixMultiplication{
 		MatrixMultiplication mm = new MatrixMultiplication();
 		int[][] A = {
 			{4, 7},
-			{6, 9}
+			{6, 9},
+			{3, 8}
 		};
 		int[][] B = {
 			{1, 3},
