@@ -1,5 +1,11 @@
 public class MatrixMultiplication{
 
+	/*
+	 * Method for Matrix Multiplication
+	 * Takes 5 parameters
+	 * Multiplies 2 matrices if valid to multiply
+	 * Saves result into an empty 2D array
+	 */
 	public int[][] matrixMultiplication(int[][] A, int[][] B, int n, int row, int col){
 
 		int[][] C = new int[row][col];
@@ -15,6 +21,11 @@ public class MatrixMultiplication{
 		return C;
 	}
 
+	/*
+	 * Method to print the result
+	 * Prints the product 2D array
+	 * if statement used for organization purposes
+	 */
 	public static void printResult(int[][] result, int row, int col){
 		System.out.print("\t   [");
 		for(int i = 0; i < row; i++){
@@ -32,6 +43,7 @@ public class MatrixMultiplication{
 		System.out.println();
 	}
 
+	//Main Method
 	public static void main(String[] args){
 
 		MatrixMultiplication mm = new MatrixMultiplication();
