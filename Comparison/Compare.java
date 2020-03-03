@@ -1,5 +1,11 @@
 public class Compare{
 	
+	/*
+	 *Method to perform Binary Search Algorithm
+	 *Starts the search in the middle of the array
+ 	 *And begins searching left or right side of array
+	 *Depending if greater or less than 
+	 */	 
 	public int binarySearch(int[] arr, int x){
 		
 		int low = 0, high = arr.length - 1, countBin = 1;
@@ -26,6 +32,11 @@ public class Compare{
 		return -1;
 	}
 
+	/*
+	 *Method to perform Linear Search Algorithm
+	 *Checks if number is equal to any number in array
+	 *Begins with first index and works its way up
+	 */
 	public int linearSearch(int[] arr, int x){
 		int countLin = 1;
 		System.out.println("\n\tLINEAR SEARCH METHOD");
@@ -41,6 +52,7 @@ public class Compare{
 		return -1;
 	}
 
+	//Prints out entire array
 	public static void printArray(int[] arr){
 		System.out.println("\n\tARRAYS");
 		for(int i = 0; i < arr.length; i++){
@@ -51,11 +63,16 @@ public class Compare{
 
 	public static void main(String[] args){
 
+		//Declare all variables
 		Compare com = new Compare();
 		int[] arr = {3, 20, 31, 35, 42, 60, 70, 71, 150, 200, 209};
 		int searchFor = 42;
+		
+		//Call print method
 		printArray(arr);
 		System.out.println("SEARCH FOR: " + searchFor);
+
+		//Call Linear and Binary Search Method
 		int resultLinear = com.linearSearch(arr, searchFor);
 		int resultBinary = com.binarySearch(arr, searchFor);
 
