@@ -20,11 +20,11 @@ class Floyd
 	private static void printSolution(int[][] cost, int[][] path, int N)
    {
    System.out.println("Matrix: Floyd's Algorithm Shortest Path\n");
-   System.out.println("{ 0, 1, M, 1, 5 }");
-   System.out.println("{ 9, 0, 3, 2, M }");
-	System.out.println("{ M, M, 0, 4, M }");
-   System.out.println("{ M, M, 2, 0, 3 }");
-   System.out.println("{ 3, M, M, M, 0 }\n");  
+   System.out.println("{ 0, -1, -3, 5 }");
+   System.out.println("{ 3, 0, 0, 8 }");
+	System.out.println("{ 5, 2, 0, 10 }");
+   System.out.println("{ M, M, 2, 0 }");
+   System.out.println("{ 3, M, M, M }\n");  
    
 		for (int v = 0; v < N; v++)
 		{
@@ -103,17 +103,16 @@ class Floyd
 	public static void main(String[] args)
 	{
 		// Number of vertices in the adjMatrix
-		final int N = 5;
+		final int N = 4;
 		int M = Integer.MAX_VALUE;
 
 		// given adjacency representation of matrix
 		int[][] adjMatrix = new int[][]
 		{
-			{ 0, 1, M, 1, 5 },
-			{ 9, 0, 3, 2, M },
-			{ M, M, 0, 4, M },
-			{ M, M, 2, 0, 3 },
-         { 3, M, M, M, 0 }
+			{ 0, -1, -3, 5 },
+			{ 3, 0, 0, 8 },
+			{ 5, 2, 0, 10 },
+			{ 9, 6, 4, 0 }
 		};
 
 		// Run Floyd's algorithm
